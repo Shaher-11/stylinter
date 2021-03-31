@@ -20,6 +20,7 @@ class Stylint
       bracket(line, number)
       commicolon(line, number)
       comma(line, number)
+      line_space(line, number)
     end
 
     if @errors.length.zero?
