@@ -13,8 +13,10 @@ class Stylint
   def check
     number = 0
     File.readlines(@file_path).each do |line|
-      semicolons(line, number)
       number += 1
+      semicolons(line, number)
+      tail_space(line, number)
+      braces(line, number)
     end
 
     if @errors.length.zero?
@@ -23,6 +25,15 @@ class Stylint
       @errors.sort { |el1, el2| el2 <=> el1 }
     end
   end
-
   
+end
+
+class String
+  def is_upper?
+    self == self.upcase
+  end
+
+  def is_lower?
+    self == self.downcase
+  end
 end
