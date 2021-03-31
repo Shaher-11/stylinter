@@ -3,10 +3,10 @@
 }}
 
 header {
-font-weight: rghpx;
+font-weight: rghpx;''
 }
 body {
-  background-color: #FFF;,
+  background-color: #FFF;,"
 }
 
 footer {
@@ -14,7 +14,7 @@ footer {
 ]
 
 section {
-  background-attachment:  fixed;, :-webkit-validation-bubble-arrow
+  background-attachment:  fixed; :-webkit-validation-bubble-arrow}
 }
 
 navbar {
