@@ -21,6 +21,8 @@ class Stylint
       commicolon(line, number)
       comma(line, number)
       font(line, number)
+      long_line(line, number)
+      zero(line, number)
     end
 
     if @errors.length.zero?
@@ -28,16 +30,5 @@ class Stylint
     else
       @errors.sort { |el1, el2| el2 <=> el1 }
     end
-  end
-  
-end
-
-class String
-  def is_upper?
-    self == self.upcase
-  end
-
-  def is_lower?
-    self == self.downcase
   end
 end
