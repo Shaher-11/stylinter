@@ -9,6 +9,7 @@ class Stylint
     @file_path = file_path
     @errors = []
   end
+
   def check
     number = 0
     File.readlines(@file_path).each do |line|
@@ -28,7 +29,6 @@ class Stylint
       dobl_zero(line, number)
       capital(line, number)
     end
-
 
     if @errors.length.zero?
       @errors << "All checks have succefully passed ! No errors detected. \u{1F389} \u{1F389} \u{1F389} ".colorize(:light_green)

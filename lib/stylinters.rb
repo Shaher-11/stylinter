@@ -60,12 +60,14 @@ module Stylinters
 
     val = line.split(':')[1]
     decimals = val.gsub(/[^\d,.]/i, '')
-    @errors << "Use only one zero for the decimal on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:red) if decimals[00] == '.'
+    @errors << "Use only one zero for the decimal on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:red) if decimals[0o0] == '.'
   end
+
   def comment(line, number)
-      @errors << "Replace multi line with a single line comment on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_red) if line.to_s.match('/* */')
-  end 
+    @errors << "Replace multi line with a single line comment on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_red) if line.to_s.match('/* */')
+  end
+
   def capital(line, number)
     @errors << "Replace the capital letters  on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_red) if line =~ /[A-Z]/
-end 
+  end
 end
