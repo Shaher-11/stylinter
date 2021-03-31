@@ -12,4 +12,13 @@ module Stylinters
   def bracket(line, number)
     @errors << "brackets been detected on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_red) if line.include?(']')
   end
+  def commicolon(line, number)
+    @errors << "Comma after the semicolon on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_red) if line.include?(';,')
+  end
+  def comma(line, number)
+    return unless line.include?(',')
+    comt = line.split(',')[1]
+    @errors << "Space must be after the comma on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_red) if comt[0] != ' '
+  end
+
 end

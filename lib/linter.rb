@@ -18,6 +18,8 @@ class Stylint
       tail_space(line, number)
       braces(line, number)
       bracket(line, number)
+      commicolon(line, number)
+      comma(line, number)
     end
 
     if @errors.length.zero?
