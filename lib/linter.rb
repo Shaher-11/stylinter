@@ -17,6 +17,7 @@ class Stylint
       semicolons(line, number)
       tail_space(line, number)
       braces(line, number)
+      bracket(line, number)
     end
 
     if @errors.length.zero?

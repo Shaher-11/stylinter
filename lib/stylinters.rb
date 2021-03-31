@@ -9,4 +9,7 @@ module Stylinters
   def braces(line, number)
     @errors << "Extra braces detected on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_red) if line.include?('}}')
   end
+  def bracket(line, number)
+    @errors << "brackets been detected on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_red) if line.include?(']')
+  end
 end
