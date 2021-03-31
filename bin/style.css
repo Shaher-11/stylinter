@@ -20,6 +20,9 @@ section {
 navbar {
   width: .7rem;
 }
-BODY 
+
+html {
+  height: 00.75rem;
+}
 
 /* */ 

@@ -55,7 +55,14 @@ module Stylinters
     @errors << "Zero must come before the decimal on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:red) if decimals[0] == '.'
   end
 
+  def dobl_zero(line, number)
+    return unless line.include?(':')
+
+    val = line.split(':')[1]
+    decimals = val.gsub(/[^\d,.]/i, '')
+    @errors << "Use only one zero for the decimal on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:red) if decimals[00] == '.'
+  end
   def comment(line, number)
-      @errors << "Replace the multi line comment with a single line comment on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_red) if line.to_s.match('/* */')
+      @errors << "Replace multi line with a single line comment on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_red) if line.to_s.match('/* */')
   end 
 end
