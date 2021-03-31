@@ -26,6 +26,7 @@ class Stylint
       dobl_quote(line, number)
       comment(line, number)
       dobl_zero(line, number)
+      capital(line, number)
     end
 
 
