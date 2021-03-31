@@ -24,6 +24,7 @@ class Stylint
       zero(line, number)
       quote(line, number)
       dobl_quote(line, number)
+      comment(line, number)
     end
 
 
