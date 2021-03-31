@@ -20,7 +20,9 @@ module Stylinters
     comt = line.split(',')[1]
     @errors << "Space must be after the comma on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_red) if comt[0] != ' '
   end
-  def line_space(line, number)
-    @errors << "FOr fast loadig remove the empty line  on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_red) if /\S/ !~ line 
+  def font(line, number)
+    return unless line.include?('font-weight') && !line.match(/\d/i)
+
+    @errors << "The font weight should be a number on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:red)
   end
 end
