@@ -76,4 +76,35 @@ describe '#braces' do
                         expect(r).not_to eql(["Avoide using log lines of code  on the line number on the line number 11 \u{1f91a} \u{1f91a} \u{1f91a}"])
                       end
                     end
+
+                    describe '#comment' do
+                      linter = Stylint.new('../spec/stylint.css')
+                        it 'checks if there are two braces on the same line' do
+                          r = linter.send(:comment, '/* */ ', 12)
+                          expect(r).not_to eql(["Replace multi line with a single line comment on the line number 12 \u{1f91a} \u{1f91a} \u{1f91a}"])
+                        end
+                      end
+                      describe '#capital' do
+                        linter = Stylint.new('../spec/stylint.css')
+                          it 'checks if there are two braces on the same line' do
+                            r = linter.send(:font, 'FFF ', 14)
+                            expect(r).not_to eql(["Replace the capital letters  on the line number 14 \u{1f91a} \u{1f91a} \u{1f91a}"])
+                          end
+                        end
+
+                        describe '#zero' do
+                          linter = Stylint.new('../spec/stylint.css')
+                            it 'checks if there are two braces on the same line' do
+                              r = linter.send(:zero, 'FFF ', 15)
+                              expect(r).not_to eql(["Zero must come before the decimal on the line number 15 \u{1f91a} \u{1f91a} \u{1f91a}"])
+                            end
+                          end
+
+                          describe '#dobl_zero' do
+                            linter = Stylint.new('../spec/stylint.css')
+                              it 'checks if there are two braces on the same line' do
+                                r = linter.send(:dobl_zero, 'FFF ', 16)
+                                expect(r).not_to eql(["Zero must come before the decimal on the line number 16 \u{1f91a} \u{1f91a} \u{1f91a}"])
+                              end
+                            end
 end 
