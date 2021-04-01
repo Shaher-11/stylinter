@@ -37,6 +37,3 @@ class Stylint
     end
   end
 end
-
-
-  
