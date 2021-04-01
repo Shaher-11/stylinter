@@ -266,13 +266,14 @@ span {
 
 > **Bad code:**
 ```
-/* this is a comment */ 
+/* this is a 
+comment */ 
 ```
 
 > **Good code:**
 
 ```
-# this comment is even better
+ /* This is a better comment */
 ```
 
 ## Author

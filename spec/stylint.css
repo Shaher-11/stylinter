@@ -1,0 +1,32 @@
+.btn {
+  padding: 5px;;
+}
+
+header {
+font-weight: 5rem;
+}
+body {
+  background-color: #fff;
+}
+
+footer {
+  color: black; 
+}
+
+section {
+  background-color: black;
+}
+
+navbar {
+  width: 0.7rem;
+}
+
+html {
+  height: 0.75rem;
+}
+
+.element {
+  margin: 15px;
+}
+
+ /* single line comment i here */
