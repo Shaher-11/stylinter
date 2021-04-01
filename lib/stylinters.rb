@@ -64,7 +64,7 @@ module Stylinters
   end
 
   def comment(line, number)
-    @errors << "Replace multi line with a single line comment on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_red) if line.to_s.match('/* */')
+    @errors << "Replace multi line with a single line comment on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:light_yellow) if line.to_s.match('/* */')
   end
 
   def capital(line, number)
