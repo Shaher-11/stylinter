@@ -61,4 +61,19 @@ describe '#braces' do
                     expect(r).not_to eql(["Space must be after the comma on the line number 8 \u{1f91a} \u{1f91a} \u{1f91a}"])
                   end
                 end
+
+                describe '#font' do
+                  linter = Stylint.new('../spec/stylint.css')
+                    it 'checks if there are two braces on the same line' do
+                      r = linter.send(:font, 'bold', 10)
+                      expect(r).not_to eql(["The font weight should be a number on the line number 10 \u{1f91a} \u{1f91a} \u{1f91a}"])
+                    end
+                  end
+                  describe '#long_line' do
+                    linter = Stylint.new('../spec/stylint.css')
+                      it 'checks if there are two braces on the same line' do
+                        r = linter.send(:font, '7 ', 10)
+                        expect(r).not_to eql(["Avoide using log lines of code  on the line number on the line number 11 \u{1f91a} \u{1f91a} \u{1f91a}"])
+                      end
+                    end
 end 
