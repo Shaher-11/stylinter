@@ -1,18 +1,16 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+![](https://img.shields.io/badge/stylinter-blueviolet)
 
-# Project Name
+# stylinter
 
-> One paragraph statement about the project.
+> Stylinter project built with ruby to check the common mistake in the CSS file
 
-![screenshot](./app_screenshot.png)
+![screenshot](./linter-search.gif)
 
-Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
+- RSpec
 
 ## Live Demo
 
@@ -41,19 +39,13 @@ To get a local copy up and running follow these simple example steps.
 
 
 
-## Authors
+## Author
 
-👤 **Author1**
+👤 **Shaher**
 
 - Twitter: [@twitterhandle](https://twitter.com/ShaherShamroukh/)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/shaher-shamroukh/)
 - GitHub: [@githubhandle](https://github.com/Shaher-11/)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
 
 ## 🤝 Contributing
 
@@ -67,9 +59,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- Stylint
 
 ## 📝 License
 
