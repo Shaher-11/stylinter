@@ -31,4 +31,20 @@ describe '#braces' do
             expect(r).not_to eql(["You have double quotes on the line number 9 \u{1f91a} \u{1f91a} \u{1f91a}"])
           end
         end
+
+        describe '#tail_space' do
+          linter = Stylint.new('../spec/stylint.css')
+            it 'checks if there are two braces on the same line' do
+              r = linter.send(:tail_space, ' ', 1)
+              expect(r).not_to eql(["Tailing spaces have been detected on the line number 1 \u{1f91a} \u{1f91a} \u{1f91a}"])
+            end
+          end
+          describe '#bracket' do
+            linter = Stylint.new('../spec/stylint.css')
+              it 'checks if there are two braces on the same line' do
+                r = linter.send(:bracket, ']', 2)
+                expect(r).not_to eql(["Tailing spaces have been detected on the line number 2 \u{1f91a} \u{1f91a} \u{1f91a}"])
+              end
+            end
+          
 end 

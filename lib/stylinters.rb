@@ -13,7 +13,7 @@ module Stylinters
 
   def tail_space(line, number)
     stripped = line.delete("\n")
-    @errors << "Trailing spaces have been detected on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:red) if stripped.end_with?(' ')
+    @errors << "Tailing spaces have been detected on the line number #{number} \u{1f91a} \u{1f91a} \u{1f91a}".colorize(:red) if stripped.end_with?(' ')
   end
 
   def braces(line, number)
