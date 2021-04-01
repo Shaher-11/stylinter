@@ -14,20 +14,20 @@ class Stylint
     number = 0
     File.readlines(@file_path).each do |line|
       number += 1
-      semicolons(line, number)
-      tail_space(line, number)
-      braces(line, number)
-      bracket(line, number)
-      commicolon(line, number)
-      comma(line, number)
-      font(line, number)
-      long_line(line, number)
-      zero(line, number)
-      quote(line, number)
-      dobl_quote(line, number)
-      comment(line, number)
-      dobl_zero(line, number)
-      capital(line, number)
+      semicolons_check(line, number)
+      tail_space_check(line, number)
+      braces_check(line, number)
+      bracket_check(line, number)
+      commicolon_check(line, number)
+      comma_check(line, number)
+      font_check(line, number)
+      long_line_check(line, number)
+      zero_check(line, number)
+      quote_check(line, number)
+      dobl_quote_check(line, number)
+      comment_check(line, number)
+      dobl_zero_check(line, number)
+      capital_check(line, number)
     end
 
     if @errors.length.zero?

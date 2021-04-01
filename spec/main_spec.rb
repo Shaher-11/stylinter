@@ -1,14 +1,14 @@
 require_relative '../lib/linter'
 require_relative '../lib/stylinters'
 describe Stylint do
-  describe '#braces' do
+  describe '#braces_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:braces, '{}', 6)
       expect(r).not_to eql(["Extra braces detected on the line number 6 \u{1f91a} \u{1f91a} \u{1f91a}"])
     end
   end
-  describe '#semicolons' do
+  describe '#semicolons_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:semicolons, ';;', 5)
@@ -16,7 +16,7 @@ describe Stylint do
     end
   end
 
-  describe '#quote' do
+  describe '#quote_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:quote, "'", 7)
@@ -24,7 +24,7 @@ describe Stylint do
     end
   end
 
-  describe '#dobl_quote' do
+  describe '#dobl_quote_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:dobl_quote, '"', 9)
@@ -32,14 +32,14 @@ describe Stylint do
     end
   end
 
-  describe '#tail_space' do
+  describe '#tail_space_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:tail_space, ' ', 1)
       expect(r).not_to eql(["Tailing spaces have been detected on the line number 1 \u{1f91a} \u{1f91a} \u{1f91a}"])
     end
   end
-  describe '#bracket' do
+  describe '#bracket_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:bracket, ']', 2)
@@ -47,14 +47,14 @@ describe Stylint do
     end
   end
 
-  describe '#commicolon' do
+  describe '#commicolon_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:commicolon, ',', 4)
       expect(r).not_to eql(["Comma after the semicolon on the line number 4 \u{1f91a} \u{1f91a} \u{1f91a}"])
     end
   end
-  describe '#comma' do
+  describe '#comma_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:comma, ', ', 8)
@@ -62,14 +62,14 @@ describe Stylint do
     end
   end
 
-  describe '#font' do
+  describe '#font_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:font, 'bold', 10)
       expect(r).not_to eql(["The font weight should be a number on the line number 10 \u{1f91a} \u{1f91a} \u{1f91a}"])
     end
   end
-  describe '#long_line' do
+  describe '#long_line_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:font, '7 ', 10)
@@ -77,14 +77,14 @@ describe Stylint do
     end
   end
 
-  describe '#comment' do
+  describe '#comment_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:comment, '/* */ ', 12)
       expect(r).not_to eql(["Replace multi line with a single line comment on the line number 12 \u{1f91a} \u{1f91a} \u{1f91a}"])
     end
   end
-  describe '#capital' do
+  describe '#capital_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:font, 'FFF ', 14)
@@ -92,7 +92,7 @@ describe Stylint do
     end
   end
 
-  describe '#zero' do
+  describe '#zero_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:zero, 'FFF ', 15)
@@ -100,7 +100,7 @@ describe Stylint do
     end
   end
 
-  describe '#dobl_zero' do
+  describe '#dobl_zero_check' do
     linter = Stylint.new('../spec/stylint.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:dobl_zero, 'FFF ', 16)

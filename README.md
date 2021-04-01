@@ -26,8 +26,8 @@ to check that simply run ``ruby -v`` on the terminal.
 In order to run the linter on your local machine, please run the following commands on your terminal:
 
 >1. run  `git clone https://github.com/Shaher-11/stylinter.git`
->2. run  `cd stylinter`
->3. run  `ruby bin/main.rb`
+>2. run  `cd stylinter/bin`
+>3. run  `ruby main.rb`
 >4. Enjoy the linting!
 
 ### Testing
