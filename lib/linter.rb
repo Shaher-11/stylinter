@@ -3,8 +3,6 @@ require_relative('../lib/stylinters')
 class Stylint
   include Stylinters
 
-  attr_reader :file_path, :errors
-
   def initialize(file_path)
     @file_path = file_path
     @errors = []
