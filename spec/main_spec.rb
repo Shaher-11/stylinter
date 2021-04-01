@@ -47,4 +47,18 @@ describe '#braces' do
               end
             end
           
+            describe '#commicolon' do
+              linter = Stylint.new('../spec/stylint.css')
+                it 'checks if there are two braces on the same line' do
+                  r = linter.send(:commicolon, ',', 4)
+                  expect(r).not_to eql(["Comma after the semicolon on the line number 4 \u{1f91a} \u{1f91a} \u{1f91a}"])
+                end
+              end
+              describe '#comma' do
+                linter = Stylint.new('../spec/stylint.css')
+                  it 'checks if there are two braces on the same line' do
+                    r = linter.send(:comma, ', ', 8)
+                    expect(r).not_to eql(["Space must be after the comma on the line number 8 \u{1f91a} \u{1f91a} \u{1f91a}"])
+                  end
+                end
 end 
