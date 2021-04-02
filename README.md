@@ -20,7 +20,7 @@
 **Prerequisites**
 
 Before running the program, you need to make sure Ruby is installed on your computer,
-to check that simply run ``ruby -v`` on the terminal.
+to check that run ``ruby -v`` on the terminal.
 
 ### Installation
 In order to run the linter on your local machine, please run the following commands on your terminal:
