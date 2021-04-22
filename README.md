@@ -2,7 +2,7 @@
 
 # stylinter
 
-> CSS linter program that detects style issues within the css file, and provides detailed feedback on how to fix them. 
+> Ruby program that detects style issues within the CSS file, and provides detailed feedback on how to fix them. 
 > The user can also edit their CSS file as they please.
 
 ![screenshot](./linter-search.gif)
